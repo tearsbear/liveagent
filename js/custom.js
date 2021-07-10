@@ -65,7 +65,7 @@ $$('#inputMsg').on('keyup', function (e) {
 $('.messages, .panel, .navbar, .toolbar').hide();
 
 $(window).on('load', function () {
-    setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+    setTimeout(removeLoader, 800); //wait for page load PLUS two seconds.
 });
 
 

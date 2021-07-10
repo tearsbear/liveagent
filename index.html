@@ -23,7 +23,7 @@
     <!-- App root element -->
     <div id="app">
         <!-- Left Panel with Reveal effect -->
-        <div class="panel panel-left panel-menu panel-cover bg-color2" style="width: 400px;">
+        <div class="panel panel-left panel-menu panel-cover bg-color2">
             <!-- Top Navbar -->
             <div class="navbar">
                 <div class="navbar-bg bg-color2"></div>
@@ -94,7 +94,7 @@
             </div>
         </div>
 
-        <div class="panel panel-right panel-details panel-cover bg-color3" style="width: 300px">
+        <div class="panel panel-right panel-details panel-cover bg-color3">
             <!-- Top Navbar -->
             <div class="navbar">
                 <div class="navbar-bg bg-color3"></div>
@@ -168,7 +168,19 @@
                 <div class="navbar">
                     <div class="navbar-bg bg-color2"></div>
                     <div class="navbar-inner">
+                        <div class="left">
+                            <a class="link panel-open toggle-panel" data-panel=".panel-menu" href="#"
+                                style="display: none;">
+                                <i class="bi bi-chat-text text-color-black"></i>
+                            </a>
+                        </div>
                         <div class="title font-nunito-medium" id="titleChatRoom">Irvan Smith
+                        </div>
+                        <div class="right">
+                            <a class="link panel-open toggle-panel" data-panel=".panel-details" href="#"
+                                style="display: none;">
+                                <i class="bi bi-info-circle text-color-black"></i>
+                            </a>
                         </div>
                     </div>
                 </div>

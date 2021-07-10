@@ -226,3 +226,22 @@
 .chattext {
     font-size: 14px !important;
 }
+
+@media only screen and (max-width: 600px) {
+    .toggle-panel {
+        display: block !important;
+    }
+    .toggle-panel i {
+        color: var(--color1);
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .panel-menu {
+        width: 400px;
+    }
+    .panel-details {
+        width: 300px;
+    }
+}
