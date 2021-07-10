@@ -163,7 +163,7 @@
         <!-- Your main view, should have "view-main" class -->
         <div class="view view-main">
             <!-- Initial Page, "data-name" contains page name -->
-            <div data-name="home" class="page">
+            <div data-name="home" class="page bg-color2">
                 <!-- Top Navbar -->
                 <div class="navbar">
                     <div class="navbar-bg bg-color2"></div>
@@ -187,10 +187,17 @@
 
                 <!-- Scrollable page content -->
                 <div class="page-content">
-                    <div class="messages bg-color2">
-                        <!-- Messages title -->
+                    <!-- <div class="messages bg-color2">
                         <div class="messages-title"><b id="dateMsg"></b> <span id="timeMsg"></span></div>
+                    </div> -->
 
+                    <div id="loading">
+                        <i class="bi bi-chat-text-fill"></i>
+                        <h1 class="font-nunito-bold">Live Agent</h1>
+                        <p class="font-nunito-regular">please wait...</p>
+                        <center>
+                            <span class="progressbar-infinite color-yellow"></span>
+                        </center>
                     </div>
                 </div>
             </div>

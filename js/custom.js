@@ -62,6 +62,19 @@ $$('#inputMsg').on('keyup', function (e) {
     }
 })
 
+$(window).on('load', function () {
+    $('.panel, .navbar, .toolbar').hide();
+    setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+});
+
+function removeLoader() {
+    $("#loading").fadeOut(500, function () {
+        // fadeOut complete. Remove the loading div
+        $("#loading").remove(); //makes page more lightweight 
+        $('.panel, .navbar, .toolbar').show();
+    });
+}
+
 // Send Message With Button
 $$('.send-link').on('click', function () {
     let text = messagebar.getValue().replace(/\n/g, '<br>').trim();
