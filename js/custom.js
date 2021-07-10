@@ -155,10 +155,10 @@ function getMyChats() {
                 </div>
                 <div class="item-inner">
                     <div class="item-title-row">
-                        <div class="item-title" id="chatName-${ic}">${people[ic].name}</div>
+                        <div class="item-title chattitle" id="chatName-${ic}">${people[ic].name}</div>
                         <div class="item-after">17:14</div>
                     </div>
-                    <div class="item-text">Lorem ipsum dolor sit amet, consectetur
+                    <div class="item-text chattext">Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit.
                     </div>
                 </div></a></li>`
@@ -188,10 +188,10 @@ function getQueChats() {
                 </div>
                 <div class="item-inner">
                     <div class="item-title-row">
-                        <div class="item-title">${people[iq].name}</div>
+                        <div class="item-title chattitle">${people[iq].name}</div>
                         <div class="item-after">17:14</div>
                     </div>
-                    <div class="item-text">Lorem ipsum dolor sit amet, consectetur
+                    <div class="item-text chattext">Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit.
                     </div>
                 </div></a></li>`
