@@ -62,18 +62,12 @@ $$('#inputMsg').on('keyup', function (e) {
     }
 })
 
+$('.panel, .navbar, .toolbar').hide();
+
 $(window).on('load', function () {
-    $('.panel, .navbar, .toolbar').hide();
     setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
 });
 
-function removeLoader() {
-    $("#loading").fadeOut(500, function () {
-        // fadeOut complete. Remove the loading div
-        $("#loading").remove(); //makes page more lightweight 
-        $('.panel, .navbar, .toolbar').show();
-    });
-}
 
 // Send Message With Button
 $$('.send-link').on('click', function () {
@@ -103,6 +97,15 @@ $$('.send-link').on('click', function () {
     receiveMessage();
 });
 
+
+//Remove loader
+function removeLoader() {
+    $("#loading").fadeOut(500, function () {
+        // fadeOut complete. Remove the loading div
+        $("#loading").remove(); //makes page more lightweight 
+        $('.panel, .navbar, .toolbar').show();
+    });
+}
 
 //Generate Avatar Image from UI Avatars API
 function generateAvatar(value) {
