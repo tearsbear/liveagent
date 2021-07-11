@@ -13,13 +13,16 @@ var app = new Framework7({
     // ... other parameters
 });
 
+// Init View Main
 const mainView = app.views.create('.view-main');
 
+// Init Left Panel Menu
 const panelMenu = app.panel.create({
     el: '.panel-menu',
     visibleBreakpoint: 1024,
 })
 
+// Init Right Panel Details
 const panelDetails = app.panel.create({
     el: '.panel-details',
     visibleBreakpoint: 1024,

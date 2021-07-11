@@ -195,6 +195,16 @@
     background-color: transparent;
 }
 
+.general-info-card {
+    height: 200px;
+    border-radius: 10px;
+}
+
+.contact-info-card {
+    border-radius: 10px;
+    margin-top: 200px
+}
+
 #loading {
     margin-top: 150px;
     text-align: center;

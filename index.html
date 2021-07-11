@@ -22,7 +22,7 @@
 <body>
     <!-- App root element -->
     <div id="app">
-        <!-- Left Panel with Reveal effect -->
+        <!-- Left Panel ListChat & Sidebar -->
         <div class="panel panel-left panel-menu panel-cover bg-color2">
             <!-- Top Navbar -->
             <div class="navbar">
@@ -35,6 +35,7 @@
                 </div>
             </div>
 
+            <!-- Sidebar -->
             <div class="sidebar">
                 <a class="active" href="#home"><i class="bi bi-chat-text"></i></a>
                 <a href="#news"><i class="bi bi-person-check"></i></a>
@@ -50,6 +51,7 @@
                 </div>
             </div>
 
+            <!-- ListChat -->
             <div class="sidebar-content">
                 <div class="list list-chat accordion-list accordion-opposite">
                     <ul>
@@ -62,6 +64,7 @@
                             </a>
                             <div class="accordion-item-content">
                                 <div class="list media-list">
+                                    <!-- Append List myChat from custom.js -->
                                     <ul id="myChatList">
 
                                     </ul>
@@ -81,6 +84,7 @@
                             </a>
                             <div class="accordion-item-content">
                                 <div class="list media-list">
+                                    <!-- Append List queuedChat from custom.js -->
                                     <ul id="myQueList">
 
                                     </ul>
@@ -89,11 +93,10 @@
                         </li>
                     </ul>
                 </div>
-
-
             </div>
         </div>
 
+        <!-- Right Panel Details -->
         <div class="panel panel-right panel-details panel-cover bg-color3">
             <!-- Top Navbar -->
             <div class="navbar">
@@ -103,7 +106,8 @@
                 </div>
             </div>
 
-            <div class="card-details card elevation-0" style="height: 200px; border-radius: 10px;">
+            <!-- General Info Card -->
+            <div class="card-details card elevation-0 general-info-card">
                 <div class="card-content card-content-padding">
                     <h3 class="font-nunito-medium card-details-title" style="margin-top: -0px;">General Info</h3>
                     <div class="list media-list">
@@ -144,10 +148,12 @@
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126909.51719340957!2d106.76291472707103!3d-6.273932399574921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1df0898689f%3A0xfd5aae7cfe19b793!2sRUKAN%20PERMATA%20SENAYAN%201!5e0!3m2!1sid!2sid!4v1625907679095!5m2!1sid!2sid"
                     width="100%" height="200" style="border:0; border-radius: 0px 0px 10px 10px;" allowfullscreen=""
-                    loading="lazy"></iframe>
+                    loading="lazy">
+                </iframe>
             </div>
 
-            <div class="card-details card elevation-0" style="border-radius: 10px; margin-top: 200px">
+            <!-- Contact Info Card -->
+            <div class="card-details card elevation-0 contact-info-card">
                 <div class="card-content card-content-padding">
                     <h3 class="font-nunito-medium card-details-title" style="margin-top: 3px;">Contact Info</h3>
                     <div class="list links-list" style="margin-top: -10px">
@@ -185,6 +191,7 @@
                     </div>
                 </div>
 
+                <!-- Message Input -->
                 <div class="toolbar messagebar">
                     <div class="toolbar-inner">
                         <a class="link toggle-sheet" href="#">
@@ -192,17 +199,21 @@
                         </a>
                         <div class="messagebar-area">
                             <textarea id="inputMsg" class="resizable textmsg" placeholder="Type a message"></textarea>
-                        </div><a class="link send-link" style="display:none;" href="#"><i
-                                class="bi bi-arrow-up-circle-fill"></i></a>
+                        </div>
+                        <a class="link send-link" style="display:none;" href="#">
+                            <i class="bi bi-arrow-up-circle-fill"></i>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Scrollable page content -->
                 <div class="page-content">
+                    <!-- Messages Content -->
                     <div class="messages bg-color2">
                         <div class="messages-title"><b id="dateMsg"></b> <span id="timeMsg"></span></div>
                     </div>
 
+                    <!-- Loading Page -->
                     <div id="loading">
                         <i class="bi bi-chat-text-fill"></i>
                         <h1 class="font-nunito-bold">Live Agent</h1>
@@ -221,6 +232,7 @@
     <script type="text/javascript" src="js/framework7.bundle.min.js"></script>
     <!-- Path to your app js-->
     <script type="text/javascript" src="js/my-app.js"></script>
+    <!-- Path to your custom js-->
     <script type="text/javascript" src="js/custom.js"></script>
 </body>
 

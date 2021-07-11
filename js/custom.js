@@ -3,7 +3,7 @@ const messagebar = app.messagebar.create({
     el: '.messagebar'
 });
 
-// Response flag
+// Response flag for receiveMessage
 let responseInProgress = false;
 
 //Get Date & Time
@@ -27,6 +27,7 @@ let answers = [
     'Amazing!!!'
 ]
 
+// Dummy people
 let people = [
     {
         name: 'Alea Harris'
@@ -45,7 +46,7 @@ let people = [
     },
 ];
 
-//Append date & time message
+//Append date & time for MessageContent
 $('#dateMsg').text(getDate);
 $('#timeMsg').text(getTime);
 
@@ -62,10 +63,11 @@ $$('#inputMsg').on('keyup', function (e) {
     }
 })
 
+//hide component before load
 $('.messages, .panel, .navbar, .toolbar').hide();
 
 $(window).on('load', function () {
-    setTimeout(removeLoader, 800); //wait for page load PLUS two seconds.
+    setTimeout(removeLoader, 800); //wait for page to load
 });
 
 
@@ -144,7 +146,7 @@ function receiveMessage() {
     }, 1000);
 }
 
-
+// Append List myChat
 function getMyChats() {
     for(let ic = 3; ic < people.length; ic++) {
         let listContent = `<li><a id="handleMyChats-${ic}" href="#" class="item-link item-content">
@@ -178,6 +180,7 @@ function getMyChats() {
                 
 }
 
+// Append List queuedChat
 function getQueChats() {
     for(let iq = 2; iq < people.length; iq--) {
         let listQueContent = `<li><a href="#" class="item-link item-content">
